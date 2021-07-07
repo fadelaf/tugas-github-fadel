@@ -1,0 +1,18 @@
+1. Saya mengikuti bootcamp untuk mendalami keahlian dan pengetahuan yang sampai saat ini dipelajari
+
+2. Rencana saya untuk ahli dan dapat bekerja dalam bidang ini.
+
+3. Pelajaran hari ini mengenai variable dan tipe data primitif yang di antaranya:
+
+    variable = Sebuah wadah untuk menampung sebuah value yang memiliki tipe data
+
+    Tipe data primitif di JS:
+
+    number : 1,2,3,-1,0
+    string : 'a','b',"AB","Ac","aCm"
+    boolean : true,false
+    object : variable yg memiliki key dan value
+    undefined
+    null
+
+    
