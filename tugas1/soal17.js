@@ -7,63 +7,64 @@
     1. Buat function countValley dengan sebuah parameter (road)
         1.1 road adalah sebuah string
     
-    2. Buat variabel bernama naik dan inisiasikan dengan angka 0
+    2. Buat variabel bernama lowestPoint dan inisiasikan dengan angka 0
 
-    3. Buat variabel bernama turun dan inisiasikan dengan angka 0
+    3. Buat variabel bernama naikTurun dan inisiasikan dengan angka 0
 
-    4. lakukan looping sebanyak karakter parameter road
+    4. Buat variabel bernama mendaki dan inisiasikan dengan angka 0
+
+    5. lakukan looping sebanyak karakter parameter road
     
-    5. Di dalam looping, Buat conditional statement:
-        5.1 jika suatu indeks adalah D dan indeks selanjutnya adalah U maka dihitung satu kali naik
-        5.2 Jika suatu indeks adalah U dan indeks selanjtnya adalah D maka dihitung satu kali turun
+    6. Di dalam looping, Buat conditional statement:
+        5.1 jika suatu indeks adalah D maka naikTurun dikurangi 1
+        5.2 Jika suatu indeks adalah U maka naikTurun ditambah 1
+    
+    7. Jika naikTurun lebih kecil dari lowestPoint, masukan nilai lowestpoint sama dengan naikTurun, lalu reset ulang mendaki ke 0
 
+    8. Jika naikTurun sama dengan lowestPoint, tambahkan mendaki dengan 1
 
+    9. kembalikan nilai mendaki
 */
 
 
 
 function countValley(road){
-
-    let naik = 0;
-    let turun = 0;
+    
+    let lowestPoint = 0;
+    let naikTurun = 0;
     let mendaki = 0;
 
-    for(let i = 0 ; i < road.length-1 ; i++ ){
+    for(let i = 0 ; i < road.length ; i++ ){
+
+
+    if( road[i] == 'U'){
+            naikTurun += 1
+    }
+    
         
-        if( road[i] == 'D' && road[i+1] =='U'){
+    else if( road[i] == 'D'){
            
-            naik += 1
-
-        }
-        else if( road[i]=='U' &&  road[i+1]=='D'){
-            
-            turun += 1
-
-        }
+            naikTurun -= 1
 
     }
 
 
-    if( naik === turun){
-
-
-        mendaki += naik
-
+    
+    
+    if( naikTurun <  lowestPoint ){
+        lowestPoint = naikTurun
+        mendaki = 0
+    }
+    else if(naikTurun == lowestPoint){
+        mendaki += 1
 
     }
 
-    else if( naik > turun){
 
-        mendaki += turun
 
-    }
+}
 
-    else if( turun > naik ){
-
-        mendaki += naik
-    }
-
-    return mendaki;
+return mendaki
 
 }
 
