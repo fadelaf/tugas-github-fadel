@@ -46,8 +46,9 @@ class Kitchen {
     
         }
         
-        // console.log(Kue)
-        return this.saveToCSV(Kue)
+        this.saveToCSV(Kue)
+        console.log(`New cake : ${name} has been added`)
+        
 
 
     }
@@ -80,6 +81,9 @@ class Kitchen {
 
 
         this.saveToCSV(Kue)
+        console.log(`Cake has been eaten`)
+        
+        
 
     }
 
@@ -103,6 +107,8 @@ class Kitchen {
         if( Success === 1 ){
 
             this.saveToCSV(Kue)
+            console.log(`Sugar has been added`)
+        
             
         }
         else{
