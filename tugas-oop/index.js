@@ -6,11 +6,8 @@ let Kue = new Cookies()
 
 
 // Kue.getCookies()
-Kue.showCookies()
-// Kue.bake("Nastar",25000,"Sweet",true)
-// Kue.eat('Veggie Cake', 35000, 'Sweet', false)
-// Kue.eat('Sweet Cream',15000,'Sweet',true)
-// Kue.eat('Nastar',25000,'Sweet',true)  
 // Kue.showCookies()
-
-// Kue.addSugar(3,'Veggie Cake',35000,'Sweet')
+// Kue.bake("Nastar",25000,"Sweet",true)
+// Kue.eat(6,'Nastar')  
+Kue.showCookies()
+Kue.addSugar(3,'Veggie Cake',35000,'Sweet')

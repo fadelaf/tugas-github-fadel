@@ -52,17 +52,17 @@ class Kitchen {
 
     }
 
-    eat(...deleteKue){
+    eat(idKue){
 
         let Kue = this.getCookies()
 
-        let [name, price, type, isSweet] = deleteKue
+        // let [name, price, type, isSweet] = deleteKue
 
 
 
         Kue.forEach( (item,idx) => {
 
-            if(item['name'] == name && item['price'] == price && item['type'] == type && item['isSweet'] == isSweet ){
+            if(item['id'] === idKue){
 
                 Kue.splice(idx,1)
 
@@ -70,11 +70,13 @@ class Kitchen {
 
         })
 
-        Kue.forEach( (item,idx) =>{
 
-            item['id'] = idx+1
 
-        })
+        // Kue.forEach( (item,idx) =>{
+
+        //     item['id'] = idx+1
+
+        // })
 
 
         this.saveToCSV(Kue)
@@ -85,13 +87,13 @@ class Kitchen {
 
         let Kue = this.getCookies()
 
-        let [id, name, price, type] = tambahGula
+        let [id, name] = tambahGula
 
         let Success = 0
 
         Kue.forEach(item => {
 
-            if(item['id'] == id && item['name'] == name && item['price']==price && item['type'] == type && item['isSweet'] == false){
+            if(item['id'] == id && item['name'] == name ){
                 item['isSweet'] = true
                 Success = 1
             }
